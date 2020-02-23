@@ -63,6 +63,18 @@ local globalKeys =
     end,
     {description = 'Switch to next window', group = 'client'}
   ),
+    awful.key({ modkey }, "Up", function () awful.client.focus.bydirection("up")
+      if client.focus then client.focus:raise() end
+    end),
+    awful.key({ modkey }, "Down", function () awful.client.focus.bydirection("down")
+        if client.focus then client.focus:raise() end
+    end),
+    awful.key({ modkey }, "Right", function () awful.client.focus.bydirection("right")
+      if client.focus then client.focus:raise() end
+    end),
+    awful.key({ modkey }, "Left", function () awful.client.focus.bydirection("left")
+        if client.focus then client.focus:raise() end
+    end),
   awful.key(
     {altkey, 'Shift'},
     'Tab',

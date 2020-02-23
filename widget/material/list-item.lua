@@ -51,7 +51,7 @@ function mat_list_item:layout(_, width, height)
   if self._private.prefix then
     content_x = content_x + dpi(54)
     content_width = content_width - dpi(54)
-    table.insert(layout, base.place_widget_at(self._private.prefix, dpi(16), 0, dpi(48), height))
+    table.insert(layout, base.place_widget_at(self._private.prefix, dpi(16), 0, dpi(40), height))
   end
 
   if self._private.suffix then
@@ -63,7 +63,7 @@ function mat_list_item:layout(_, width, height)
 end
 
 function mat_list_item:fit(_, width)
-  return width, dpi(48)
+  return width, dpi(40)
 end
 
 ---- Properties ----

@@ -45,7 +45,7 @@ end
 
 function mat_slider:layout(_, width, height)
   local layout = {}
-  table.insert(layout, base.place_widget_at(self._private.progress_bar, 0, dpi(21), width, height - dpi(42)))
+  table.insert(layout, base.place_widget_at(self._private.progress_bar, 0, dpi(21), width, height - dpi(38)))
   if (not self._private.read_only) then
     table.insert(layout, base.place_widget_at(self._private.slider, 0, dpi(6), width, height - dpi(12)))
   end

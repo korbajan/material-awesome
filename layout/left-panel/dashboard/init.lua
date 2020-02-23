@@ -11,12 +11,12 @@ return function(_, panel)
     wibox.widget {
     wibox.widget {
       icon = icons.search,
-      size = dpi(24),
+      size = dpi(20),
       widget = mat_icon
     },
     wibox.widget {
       text = 'Search Applications',
-      font = 'Roboto medium 13',
+      font = 'Roboto medium 10',
       widget = wibox.widget.textbox
     },
     clickable = true,
@@ -39,12 +39,12 @@ return function(_, panel)
     wibox.widget {
     wibox.widget {
       icon = icons.logout,
-      size = dpi(24),
+      size = dpi(20),
       widget = mat_icon
     },
     wibox.widget {
       text = 'End work session',
-      font = 'Roboto medium 13',
+      font = 'Roboto medium 10',
       widget = wibox.widget.textbox
     },
     clickable = true,

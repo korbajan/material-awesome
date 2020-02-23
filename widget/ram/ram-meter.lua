@@ -27,7 +27,7 @@ local ram_meter =
   wibox.widget {
   wibox.widget {
     icon = icons.memory,
-    size = dpi(24),
+    size = dpi(20),
     widget = mat_icon
   },
   slider,

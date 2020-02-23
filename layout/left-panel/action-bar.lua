@@ -10,7 +10,7 @@ local clickable_container = require('widget.material.clickable-container')
 
 return function(screen, panel, action_bar_width)
   -- Clock / Calendar 24h format
-  local textclock = wibox.widget.textclock('<span font="Roboto Mono bold 11">%H\n%M</span>')
+  local textclock = wibox.widget.textclock('<span font="Roboto Mono bold 10">%H\n%M</span>')
 
   -- Clock / Calendar 12AM/PM fornat
   -- local textclock = wibox.widget.textclock('<span font="Roboto Mono bold 11">%I\n%M</span>\n<span font="Roboto Mono bold 9">%p</span>')
@@ -24,7 +24,7 @@ return function(screen, panel, action_bar_width)
   })
   month_calendar:attach(textclock)
 
-  local clock_widget = wibox.container.margin(textclock, dpi(13), dpi(13), dpi(8), dpi(8))
+  local clock_widget = wibox.container.margin(textclock, dpi(10), dpi(10), dpi(7), dpi(7))
   local systray = wibox.widget.systray()
   systray:set_horizontal(false)
   systray:set_base_size(24)
@@ -32,7 +32,7 @@ return function(screen, panel, action_bar_width)
   local menu_icon =
     wibox.widget {
     icon = icons.menu,
-    size = dpi(24),
+    size = dpi(20),
     widget = mat_icon
   }
 
@@ -90,8 +90,8 @@ return function(screen, panel, action_bar_width)
       -- Right widgets
       layout = wibox.layout.fixed.vertical,
       wibox.container.margin(systray, dpi(10), dpi(10)),
-      --require('widget.package-updater'),
-      --require('widget.wifi'),
+      require('widget.package-updater'),
+      require('widget.wifi'),
       require('widget.battery'),
       -- Clock
       --clock_widget

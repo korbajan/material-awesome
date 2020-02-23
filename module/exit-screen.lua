@@ -19,10 +19,10 @@ local buildButton = function(icon)
           image = icon,
           widget = wibox.widget.imagebox
         },
-        top = dpi(16),
-        bottom = dpi(16),
-        left = dpi(16),
-        right = dpi(16),
+        top = dpi(13),
+        bottom = dpi(13),
+        left = dpi(13),
+        right = dpi(13),
         widget = wibox.container.margin
       },
       shape = gears.shape.circle,
@@ -30,8 +30,8 @@ local buildButton = function(icon)
       forced_height = icon_size,
       widget = clickable_container
     },
-    left = dpi(24),
-    right = dpi(24),
+    left = dpi(20),
+    right = dpi(20),
     widget = wibox.container.margin
   }
 
